@@ -45,7 +45,7 @@ while True:
             
             mpDraw.draw_landmarks(img,handLms,mphand.HAND_CONNECTIONS)
             #print("outer" ,track)
-            for i in range(3,len(track)):
+            for i in range(3,len(track)):       #starting from 3 to let the index finger placed in correct position
                     if i==3:
                         continue
                     cv2.line(imgn,(track[i-1][0],track[i-1][1]),(track[i][0],track[i][1]),(255,0,255),3)
